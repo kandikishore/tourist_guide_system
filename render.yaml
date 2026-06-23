@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: smart-tourist
+    env: python
+    plan: free
+    buildCommand: bash build.sh
+    startCommand: gunicorn smart_tourist.wsgi --log-file -
